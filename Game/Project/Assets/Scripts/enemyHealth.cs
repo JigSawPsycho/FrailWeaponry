@@ -19,10 +19,9 @@ public class enemyHealth : MonoBehaviour
         }
     }
 
-    public void GetHit(float damage)
+    public void GetHit(float _damage)
     {
-        
+        EnemyHealth -= _damage;
         Instantiate(explosion, transform.position, Quaternion.identity);
-        EnemyHealth -= damage;
     }
 }

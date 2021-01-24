@@ -6,7 +6,7 @@ using System.Linq;
 
 public class Turret : MonoBehaviour
 {
-    float damage;
+    [SerializeField] float damage;
     float health;
     float rateOfFire;
     float range;
@@ -71,7 +71,6 @@ public class Turret : MonoBehaviour
             return;
         }
         GameObject[] objsInRange = Physics2D.OverlapCircleAll(pos, range).Select(x => x.gameObject).ToArray();
-        Debug.Log($"Targets: {objsInRange.Length}");
         GameObject closestTarget = null;
 
         foreach(GameObject obj in objsInRange)
@@ -102,6 +101,7 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
+        Debug.Log("Pew");
         if (currentTarget != null && broken == false)
         {
             currentTarget.GetComponent<enemyHealth>().GetHit(damage);
