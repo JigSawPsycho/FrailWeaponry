@@ -6,7 +6,7 @@ using System.Linq;
 
 public class Turret : MonoBehaviour
 {
-    int damage;
+    int damage = 10;
     int health;
     float rateOfFire = 1f;
     float range = 10f;
@@ -20,7 +20,8 @@ public class Turret : MonoBehaviour
     private void Start()
     {
         pos = this.gameObject.transform.position;
-        InvokeRepeating(nameof(CheckForTarget), rateOfFire, rateOfFire);
+        InvokeRepeating(nameof(CheckForTarget), 0.1f, 0.1f);
+        InvokeRepeating(nameof(Shoot), rateOfFire, rateOfFire);
     }
 
     private void Update()
@@ -61,7 +62,6 @@ public class Turret : MonoBehaviour
     {
         if (currentTarget != null)
         {
-            Shoot(currentTarget);
             return;
         }
         GameObject[] objsInRange = Physics2D.OverlapCircleAll(pos, range).Select(x => x.gameObject).ToArray();
@@ -92,15 +92,14 @@ public class Turret : MonoBehaviour
                 }
             }
         }
-        if (closestTarget != null)
-        {
-            Shoot(closestTarget);
-        }
     }
 
-    void Shoot(GameObject target)
+    void Shoot()
     {
-
+        if (currentTarget != null)
+        {
+            currentTarget.GetComponent<enemyHealth>().GetHit(damage);
+        }
     }
 
     void Break()
