@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class KitManager : MonoBehaviour
 {
@@ -13,5 +14,11 @@ public class KitManager : MonoBehaviour
         mgKits = 0;
         sniperKits = 0;
         zapperKits = 0;
+        GameObject[] pastKits = GameObject.FindGameObjectsWithTag("Kit");
+
+        foreach(GameObject kit in pastKits)
+        {
+            Destroy(kit);
+        }
     }
 }

@@ -144,9 +144,11 @@ public class Turret : MonoBehaviour
                 break;
         }
 
+        broken = false;
+
+        Invoke(nameof(Decay), 1);
         Invoke(nameof(Shoot), 0.5f);
 
-        broken = false;
     }
 
     void Break()
@@ -157,6 +159,11 @@ public class Turret : MonoBehaviour
 
     void Decay()
     {
+        health--;
 
+        if(health > 0)
+        {
+            Invoke(nameof(Decay), 1);
+        }
     }
 }
