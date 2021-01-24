@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject enemyPrefab;
     float baseRepeatRate = 2.5f;
     float repeatTick = 0.0f;
+    public static List<GameObject> enemies = new List<GameObject>();
     
     void Start()
     {
@@ -16,6 +17,7 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         GameObject enemy = Instantiate(enemyPrefab, this.gameObject.transform.position, Quaternion.identity, this.transform);
+        enemies.Add(enemy);
 
         repeatTick += 0.1f;
 
