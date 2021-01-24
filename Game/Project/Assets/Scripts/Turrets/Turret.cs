@@ -100,7 +100,7 @@ public class Turret : MonoBehaviour
 
     void Shoot(GameObject target)
     {
-        
+        T 
     }
 
     void Break()
