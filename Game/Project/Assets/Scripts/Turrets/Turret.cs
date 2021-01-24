@@ -6,10 +6,16 @@ using System.Linq;
 
 public class Turret : MonoBehaviour
 {
-    int damage = 10;
-    int health;
-    float rateOfFire = 1f;
-    float range = 10f;
+    float damage;
+    float health;
+    float rateOfFire;
+    float range;
+    enum TurretType
+    {
+        Machinegun,
+        Sniper,
+        Zapper
+    }
     
     bool broken = false;
 
@@ -21,7 +27,7 @@ public class Turret : MonoBehaviour
     {
         pos = this.gameObject.transform.position;
         InvokeRepeating(nameof(CheckForTarget), 0.1f, 0.1f);
-        InvokeRepeating(nameof(Shoot), rateOfFire, rateOfFire);
+        Activate(TurretType.Zapper);
     }
 
     private void Update()
@@ -60,7 +66,7 @@ public class Turret : MonoBehaviour
 
     void CheckForTarget()
     {
-        if (currentTarget != null)
+        if (currentTarget != null && broken == false)
         {
             return;
         }
@@ -96,10 +102,43 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
-        if (currentTarget != null)
+        if (currentTarget != null && broken == false)
         {
             currentTarget.GetComponent<enemyHealth>().GetHit(damage);
         }
+
+        Invoke(nameof(Shoot), rateOfFire);
+    }
+
+    void Activate(TurretType type)
+    {
+        switch(type)
+        {
+            case TurretType.Machinegun:
+                health = 10f;
+                damage = 0.5f;
+                rateOfFire = 0.3f;
+                range = 10f;
+                break;
+
+            case TurretType.Sniper:
+                health = 25f;
+                damage = 10f;
+                rateOfFire = 2f;
+                range = 20f;
+                break;
+
+            case TurretType.Zapper:
+                health = 20f;
+                damage = 5f;
+                rateOfFire = 1f;
+                range = 5f;
+                break;
+        }
+
+        Invoke(nameof(Shoot), 0.5f);
+
+        broken = false;
     }
 
     void Break()
