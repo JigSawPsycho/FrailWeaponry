@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6630610205289472732}
   - component: {fileID: 2106667736406627440}
   - component: {fileID: 8677902533934379360}
+  - component: {fileID: -8510056252989740042}
   m_Layer: 0
   m_Name: EnemyRed2
   m_TagString: Enemy
@@ -167,6 +168,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 2808102032452626301, guid: 32fc22befa1430641b0e7e86c3981ea2, type: 3}
   EnemyHealth: 10
+--- !u!114 &-8510056252989740042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195912673016521433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f5ebcffabfead42834050162655b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mgKitPrefab: {fileID: 358063930687261360, guid: f3b8f9a7052be2f488f7c0eed8b30933, type: 3}
+  spKitPrefab: {fileID: 6579183485391247286, guid: a39129588655f7c4aa1bfbc0be99a76a, type: 3}
+  zpKitPrefab: {fileID: 7024831280817988293, guid: 051205dd5be3721439f035ac5696b9e0, type: 3}
 --- !u!1 &6432276763300380848
 GameObject:
   m_ObjectHideFlags: 0

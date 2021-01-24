@@ -7,7 +7,7 @@ using System.Linq;
 public class Turret : MonoBehaviour
 {
     [SerializeField] float damage;
-    float health;
+    [SerializeField] float health;
     float rateOfFire;
     float range;
     enum TurretType
@@ -23,11 +23,16 @@ public class Turret : MonoBehaviour
 
     [SerializeField] GameObject currentTarget = null;
 
+    [SerializeField] Sprite machineGunSprite;
+    [SerializeField] Sprite zapperSprite;
+    [SerializeField] Sprite sniperSprite;
+    [SerializeField] Sprite brokenSprite;
+
     private void Start()
     {
         pos = this.gameObject.transform.position;
         InvokeRepeating(nameof(CheckForTarget), 0.1f, 0.1f);
-        Activate(TurretType.Zapper);
+        Activate(TurretType.Machinegun);
     }
 
     private void Update()
@@ -119,6 +124,7 @@ public class Turret : MonoBehaviour
                 damage = 0.5f;
                 rateOfFire = 0.3f;
                 range = 10f;
+                gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = machineGunSprite;
                 break;
 
             case TurretType.Sniper:
@@ -126,6 +132,7 @@ public class Turret : MonoBehaviour
                 damage = 10f;
                 rateOfFire = 2f;
                 range = 20f;
+                gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = sniperSprite;
                 break;
 
             case TurretType.Zapper:
@@ -133,6 +140,7 @@ public class Turret : MonoBehaviour
                 damage = 5f;
                 rateOfFire = 1f;
                 range = 5f;
+                gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = zapperSprite;
                 break;
         }
 
@@ -143,7 +151,8 @@ public class Turret : MonoBehaviour
 
     void Break()
     {
-        //broken = true;
+        broken = true;
+        gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = brokenSprite;
     }
 
     void Decay()

@@ -71,7 +71,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb00e926334b914f92fe1074b012ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   currentTarget: {fileID: 0}
+  machineGunSprite: {fileID: 21300000, guid: feab90ad93ecd5542a682a55e6666d3f, type: 3}
+  zapperSprite: {fileID: 21300000, guid: cea4c69190051c34594da57c9b5c4c8f, type: 3}
+  sniperSprite: {fileID: 21300000, guid: 39e2d5c59f423154ea46f30215c65d62, type: 3}
+  brokenSprite: {fileID: 21300000, guid: 17f40117f62919b4c869ae004215a54a, type: 3}
 --- !u!1 &8283772438682900610
 GameObject:
   m_ObjectHideFlags: 0
