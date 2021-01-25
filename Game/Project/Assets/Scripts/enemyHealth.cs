@@ -6,6 +6,7 @@ public class enemyHealth : MonoBehaviour
 {
 
     public GameObject explosion;
+    public GameObject damageExplosion;
     public float EnemyHealth = 10f;
     
 
@@ -22,6 +23,6 @@ public class enemyHealth : MonoBehaviour
     public void GetHit(float _damage)
     {
         EnemyHealth -= _damage;
-        Instantiate(explosion, transform.position, Quaternion.identity);
+        Instantiate(damageExplosion, transform.position, Quaternion.identity);
     }
 }
