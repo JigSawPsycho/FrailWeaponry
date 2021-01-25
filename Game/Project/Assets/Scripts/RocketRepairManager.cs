@@ -30,9 +30,9 @@ public class RocketRepairManager : MonoBehaviour
         MYPacks = GameObject.Find("MYPacks").GetComponent<Text>();
         MPPacks = GameObject.Find("MPPacks").GetComponent<Text>();
 
-        MYPacks.text = "x 150";
-        MBPacks.text = "x 150";
-        MPPacks.text = "x 150";
+        MYPacks.text = "x 50";
+        MBPacks.text = "x 50";
+        MPPacks.text = "x 50";
 
         hasWon = false;
     }
@@ -48,7 +48,7 @@ public class RocketRepairManager : MonoBehaviour
                 KitManager.mgKits--;
                 KitManager.mgText.text = $"x {KitManager.mgKits}";
                 mgKitsUsed++;
-                MYPacks.text = $"x {150 - mgKitsUsed}";
+                MYPacks.text = $"x {50 - mgKitsUsed}";
             }
 
             if (Input.GetKeyDown(KeyCode.E) && spKitsUsed < 50 && KitManager.sniperKits > 0)
@@ -56,7 +56,7 @@ public class RocketRepairManager : MonoBehaviour
                 KitManager.sniperKits--;
                 KitManager.spText.text = $"x {KitManager.sniperKits}";
                 spKitsUsed++;
-                MBPacks.text = $"x {150 - spKitsUsed}";
+                MBPacks.text = $"x {50 - spKitsUsed}";
             }
 
             if (Input.GetKeyDown(KeyCode.R) && zpKitsUsed < 50 && KitManager.zapperKits > 0)
@@ -64,7 +64,7 @@ public class RocketRepairManager : MonoBehaviour
                 KitManager.zapperKits--;
                 KitManager.zpText.text = $"x {KitManager.zapperKits}";
                 zpKitsUsed++;
-                MPPacks.text = $"x {150 - zpKitsUsed}";
+                MPPacks.text = $"x {50 - zpKitsUsed}";
             }
         }
 
