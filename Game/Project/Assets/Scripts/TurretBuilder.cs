@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class TurretBuilder : MonoBehaviour
 {
-    void Update()
+    [SerializeField] GameObject MGTurretPrefab;
+    [SerializeField] GameObject SPTurretPrefab;
+    [SerializeField] GameObject ZPTurretPrefab;
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (other.CompareTag("Player"))
         {
-            //Build MachineTurret
+            PlayerUtil.playerTurret = gameObject;
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.E))
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && PlayerUtil.playerTurret == gameObject)
         {
-            //Build SniperTurret
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            //Build ZapperTurret
+            PlayerUtil.playerTurret = null;
         }
     }
 }

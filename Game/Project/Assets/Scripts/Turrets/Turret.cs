@@ -8,8 +8,9 @@ public class Turret : MonoBehaviour
 {
     [SerializeField] float damage;
     [SerializeField] float health;
-    float rateOfFire;
-    float range;
+    [SerializeField] float rateOfFire;
+    [SerializeField] float range;
+
     enum TurretType
     {
         Machinegun,
@@ -23,16 +24,22 @@ public class Turret : MonoBehaviour
 
     [SerializeField] GameObject currentTarget = null;
 
-    [SerializeField] Sprite machineGunSprite;
-    [SerializeField] Sprite zapperSprite;
-    [SerializeField] Sprite sniperSprite;
+    //[SerializeField] Sprite machineGunSprite;
+    //[SerializeField] Sprite zapperSprite;
+    //[SerializeField] Sprite sniperSprite;
     [SerializeField] Sprite brokenSprite;
+
+    [SerializeField] GameObject brokenTurretPrefab;
+
+    Animator anim;
 
     private void Start()
     {
         pos = this.gameObject.transform.position;
         InvokeRepeating(nameof(CheckForTarget), 0.1f, 0.1f);
-        Activate(TurretType.Machinegun);
+        anim = gameObject.transform.GetChild(0).GetComponent<Animator>();
+        Invoke(nameof(Decay), 1);
+        Invoke(nameof(Shoot), 0.5f);
     }
 
     private void Update()
@@ -57,9 +64,9 @@ public class Turret : MonoBehaviour
 
                 float angle = 0;
 
-                Vector3 relative = transform.InverseTransformPoint(currentTarget.transform.position);
+                Vector3 relative = anim.gameObject.transform.InverseTransformPoint(currentTarget.transform.position);
                 angle = Mathf.Atan2(relative.x, relative.y) * Mathf.Rad2Deg;
-                transform.Rotate(0, 0, -angle);
+                anim.gameObject.transform.Rotate(0, 0, -angle);
 
                 if (Vector2.Distance(currentTarget.transform.position, pos) > range)
                 {
@@ -110,51 +117,54 @@ public class Turret : MonoBehaviour
         if (currentTarget != null && broken == false)
         {
             currentTarget.GetComponent<enemyHealth>().GetHit(damage);
+            anim.Play("Shoot");
         }
 
         Invoke(nameof(Shoot), rateOfFire);
     }
 
-    void Activate(TurretType type)
-    {
-        switch(type)
-        {
-            case TurretType.Machinegun:
-                health = 10f;
-                damage = 0.5f;
-                rateOfFire = 0.3f;
-                range = 10f;
-                gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = machineGunSprite;
-                break;
-
-            case TurretType.Sniper:
-                health = 25f;
-                damage = 10f;
-                rateOfFire = 2f;
-                range = 20f;
-                gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = sniperSprite;
-                break;
-
-            case TurretType.Zapper:
-                health = 20f;
-                damage = 5f;
-                rateOfFire = 1f;
-                range = 5f;
-                gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = zapperSprite;
-                break;
-        }
-
-        broken = false;
-
-        Invoke(nameof(Decay), 1);
-        Invoke(nameof(Shoot), 0.5f);
-
-    }
+    //void Activate(TurretType type)
+    //{
+    //    switch(type)
+    //    {
+    //        case TurretType.Machinegun:
+    //            health = 10f;
+    //            damage = 0.5f;
+    //            rateOfFire = 0.3f;
+    //            range = 10f;
+    //            gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = machineGunSprite;
+    //            break;
+    //
+    //        case TurretType.Sniper:
+    //            health = 25f;
+    //            damage = 10f;
+    //            rateOfFire = 2f;
+    //            range = 20f;
+    //            gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = sniperSprite;
+    //            break;
+    //
+    //        case TurretType.Zapper:
+    //            health = 20f;
+    //            damage = 5f;
+    //            rateOfFire = 1f;
+    //            range = 5f;
+    //            gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = zapperSprite;
+    //            break;
+    //    }
+    //
+    //    broken = false;
+    //
+    //    
+    //
+    //    anim.enabled = true;
+    //}
 
     void Break()
     {
         broken = true;
         gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = brokenSprite;
+        Instantiate(brokenTurretPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     void Decay()
