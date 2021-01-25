@@ -113,7 +113,6 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
-        Debug.Log("Pew");
         if (currentTarget != null && broken == false)
         {
             currentTarget.GetComponent<enemyHealth>().GetHit(damage);

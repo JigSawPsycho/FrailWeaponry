@@ -8,7 +8,21 @@ public class PlayerUtil : MonoBehaviour
     [SerializeField] GameObject SPTurretPrefab;
     [SerializeField] GameObject ZPTurretPrefab;
 
+    public static GameObject QPrompt;
+    public static GameObject EPrompt;
+    public static GameObject RPrompt;
+
+    public static GameObject QWrench;
+    public static GameObject EWrench;
+    public static GameObject RWrench;
+
+    public static GameObject MGPrompt;
+    public static GameObject SPPrompt;
+    public static GameObject ZPPrompt;
+
     public static GameObject playerTurret;
+
+    public GameObject rocket;
 
     public static bool isGameOver;
 
@@ -16,6 +30,30 @@ public class PlayerUtil : MonoBehaviour
     void Start()
     {
         isGameOver = false;
+
+        QPrompt = GameObject.Find("QPrompt");
+        EPrompt = GameObject.Find("EPrompt");
+        RPrompt = GameObject.Find("RPrompt");
+
+        QWrench = GameObject.Find("QWrench");
+        EWrench = GameObject.Find("EWrench");
+        RWrench = GameObject.Find("RWrench");
+
+        MGPrompt = GameObject.Find("MGPrompt");
+        SPPrompt = GameObject.Find("SPPrompt");
+        ZPPrompt = GameObject.Find("ZPPrompt");
+
+        QPrompt.SetActive(false);
+        EPrompt.SetActive(false);
+        RPrompt.SetActive(false);
+
+        QWrench.SetActive(false);
+        EWrench.SetActive(false);
+        RWrench.SetActive(false);
+
+        MGPrompt.SetActive(false);
+        SPPrompt.SetActive(false);
+        ZPPrompt.SetActive(false);
     }
 
     // Update is called once per frame
