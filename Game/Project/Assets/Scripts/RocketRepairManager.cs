@@ -17,6 +17,8 @@ public class RocketRepairManager : MonoBehaviour
 
     bool hasWon;
 
+    public GameObject winner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,7 @@ public class RocketRepairManager : MonoBehaviour
         if(onMissile)
         {
             //Show images for buttons
-            if(Input.GetKeyDown(KeyCode.Q) && mgKitsUsed < 50)
+            if(Input.GetKeyDown(KeyCode.Q) && mgKitsUsed < 50 && KitManager.mgKits >0)
             {
                 KitManager.mgKits--;
                 KitManager.mgText.text = $"x {KitManager.mgKits}";
@@ -49,7 +51,7 @@ public class RocketRepairManager : MonoBehaviour
                 MYPacks.text = $"x {150 - mgKitsUsed}";
             }
 
-            if (Input.GetKeyDown(KeyCode.E) && spKitsUsed < 50)
+            if (Input.GetKeyDown(KeyCode.E) && spKitsUsed < 50 && KitManager.sniperKits > 0)
             {
                 KitManager.sniperKits--;
                 KitManager.spText.text = $"x {KitManager.sniperKits}";
@@ -57,7 +59,7 @@ public class RocketRepairManager : MonoBehaviour
                 MBPacks.text = $"x {150 - spKitsUsed}";
             }
 
-            if (Input.GetKeyDown(KeyCode.R) && zpKitsUsed < 50)
+            if (Input.GetKeyDown(KeyCode.R) && zpKitsUsed < 50 && KitManager.zapperKits > 0)
             {
                 KitManager.zapperKits--;
                 KitManager.zpText.text = $"x {KitManager.zapperKits}";
@@ -68,9 +70,10 @@ public class RocketRepairManager : MonoBehaviour
 
         if (zpKitsUsed + spKitsUsed + mgKitsUsed == 150 && hasWon == false)
         {
-            //Win code here
+            Instantiate(winner, transform.position, Quaternion.identity);
 
             hasWon = true;
+            Destroy(gameObject);
         }
     }
 
