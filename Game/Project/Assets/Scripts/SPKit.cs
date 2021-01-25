@@ -9,6 +9,7 @@ public class SPKit : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             KitManager.sniperKits++;
+            KitManager.spText.text = $"x {KitManager.sniperKits}";
             Destroy(gameObject);
         }
     }

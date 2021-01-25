@@ -72,8 +72,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb00e926334b914f92fe1074b012ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.75
-  health: 10
+  damage: 1.2
+  health: 15
   rateOfFire: 0.3
   range: 10
   currentTarget: {fileID: 0}

@@ -4825,8 +4825,8 @@ GameObject:
   - component: {fileID: 7147075279691968636}
   - component: {fileID: 8375781425236223094}
   - component: {fileID: 5200904216413985725}
-  - component: {fileID: 6343188460825719214}
   - component: {fileID: 344239857905708357}
+  - component: {fileID: -8862848646210234735}
   m_Layer: 0
   m_Name: EnemyPurp1
   m_TagString: Enemy
@@ -4962,21 +4962,6 @@ MonoBehaviour:
   explosion: {fileID: 2808102032452626301, guid: 32fc22befa1430641b0e7e86c3981ea2, type: 3}
   damageExplosion: {fileID: 2882711479708330450, guid: 5db763a04420444428f1ed149658efd8, type: 3}
   EnemyHealth: 10
---- !u!114 &6343188460825719214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7248613285321391211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79f5ebcffabfead42834050162655b5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mgKitPrefab: {fileID: 358063930687261360, guid: f3b8f9a7052be2f488f7c0eed8b30933, type: 3}
-  spKitPrefab: {fileID: 6579183485391247286, guid: a39129588655f7c4aa1bfbc0be99a76a, type: 3}
-  zpKitPrefab: {fileID: 7024831280817988293, guid: 051205dd5be3721439f035ac5696b9e0, type: 3}
 --- !u!95 &344239857905708357
 Animator:
   serializedVersion: 3
@@ -4996,3 +4981,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-8862848646210234735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248613285321391211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c652b760dbe9274da1d178125248145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mgKitPrefab: {fileID: 358063930687261360, guid: f3b8f9a7052be2f488f7c0eed8b30933, type: 3}
+  spKitPrefab: {fileID: 6579183485391247286, guid: a39129588655f7c4aa1bfbc0be99a76a, type: 3}
+  zpKitPrefab: {fileID: 7024831280817988293, guid: 051205dd5be3721439f035ac5696b9e0, type: 3}

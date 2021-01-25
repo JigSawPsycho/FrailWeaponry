@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  health: 25
+  health: 30
   rateOfFire: 2
   range: 20
   currentTarget: {fileID: 0}

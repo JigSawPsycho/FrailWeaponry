@@ -109,6 +109,7 @@ public class KillBotsScript : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
 
+        PlayerUtil.isGameOver = true;
         dedScreen.SetActive(true);
 
     }

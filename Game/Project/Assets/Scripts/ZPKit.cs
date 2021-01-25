@@ -9,6 +9,7 @@ public class ZPKit : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             KitManager.zapperKits++;
+            KitManager.zpText.text = $"x {KitManager.zapperKits}";
             Destroy(gameObject);
         }
     }

@@ -5,7 +5,9 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
-    float baseRepeatRate = 2.5f;
+    [SerializeField] float baseRepeatRate;
+    [SerializeField] float difficultySlope;
+    [SerializeField] float frequency;
     float repeatTick = 0.0f;
     public static List<GameObject> enemies = new List<GameObject>();
     
@@ -21,11 +23,11 @@ public class EnemySpawner : MonoBehaviour
 
         repeatTick += 0.1f;
 
-        if(repeatTick > 6.2f)
+        if(repeatTick > 15.7f)
         {
             repeatTick = 0f;
         }
 
-        Invoke(nameof(SpawnEnemy), Utility.SinGraphY(repeatTick, baseRepeatRate));
+        Invoke(nameof(SpawnEnemy), Utility.SinGraphY(repeatTick, baseRepeatRate, difficultySlope, frequency));
     }
 }

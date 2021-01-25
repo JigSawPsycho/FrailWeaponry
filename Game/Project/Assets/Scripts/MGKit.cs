@@ -9,6 +9,7 @@ public class MGKit : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             KitManager.mgKits++;
+            KitManager.mgText.text = $"x {KitManager.mgKits}";
             Destroy(gameObject);
         }
     }

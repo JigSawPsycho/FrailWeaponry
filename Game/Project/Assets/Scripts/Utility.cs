@@ -5,8 +5,8 @@ using UnityEngine;
 public class Utility : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static float SinGraphY(float x, float q)
+    public static float SinGraphY(float x, float q, float a, float b)
     {
-        return Mathf.Cos(x) + q;
+        return a * Mathf.Cos(b * x) + q;
     }
 }
