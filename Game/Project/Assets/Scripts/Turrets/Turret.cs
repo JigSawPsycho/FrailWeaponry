@@ -3,13 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Turret : MonoBehaviour
 {
     [SerializeField] float damage;
-    [SerializeField] float health;
+    float health;
+    [SerializeField] float healthMax;
     [SerializeField] float rateOfFire;
     [SerializeField] float range;
+
+    [SerializeField] 
+    Slider healthSlider;
 
     enum TurretType
     {
@@ -38,6 +43,9 @@ public class Turret : MonoBehaviour
         pos = this.gameObject.transform.position;
         InvokeRepeating(nameof(CheckForTarget), 0.1f, 0.1f);
         anim = gameObject.transform.GetChild(0).GetComponent<Animator>();
+
+        health = healthMax;
+
         Invoke(nameof(Decay), 1);
         Invoke(nameof(Shoot), 0.5f);
     }
@@ -163,12 +171,15 @@ public class Turret : MonoBehaviour
         broken = true;
         gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = brokenSprite;
         Instantiate(brokenTurretPrefab, transform.position, Quaternion.identity);
+        Destroy(healthSlider.gameObject);
         Destroy(gameObject);
     }
 
     void Decay()
     {
         health--;
+
+        healthSlider.value = health / healthMax;
 
         if(health > 0)
         {
