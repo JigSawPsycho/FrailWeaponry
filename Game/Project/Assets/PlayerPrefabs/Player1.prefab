@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c50c39eca13c649b0197c28e9162f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 4133705677718760334}
 --- !u!114 &4133705677718760335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +174,4 @@ MonoBehaviour:
   MGTurretPrefab: {fileID: 1524316981535319636, guid: 3fefeba7393f57144b047ded98d79a7c, type: 3}
   SPTurretPrefab: {fileID: 1524316981535319636, guid: 7f020791cef57aa44bd6417d78f66b02, type: 3}
   ZPTurretPrefab: {fileID: 1524316981535319636, guid: 012216465b131e74cb8848fb35645e9f, type: 3}
+  rocket: {fileID: 0}

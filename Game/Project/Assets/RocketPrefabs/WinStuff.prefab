@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 1755828103552351792}
   - component: {fileID: 1755828103552351794}
   - component: {fileID: 1755828103552351793}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}

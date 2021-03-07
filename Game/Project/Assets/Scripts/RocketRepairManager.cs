@@ -76,7 +76,7 @@ public class RocketRepairManager : MonoBehaviour
             }
         }
 
-        if (zpKitsUsed + spKitsUsed + mgKitsUsed == 150 && hasWon == false)
+        if (zpKitsUsed + spKitsUsed + mgKitsUsed == 3 && hasWon == false)
         {
             Instantiate(winner, transform.position, Quaternion.identity);
 

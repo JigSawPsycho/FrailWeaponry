@@ -4016,6 +4016,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 4133705677718760334, guid: fa46d4a5a0358214587bf31956e0d32d, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133705677718760334, guid: fa46d4a5a0358214587bf31956e0d32d, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133705677718760334, guid: fa46d4a5a0358214587bf31956e0d32d, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133705677718760334, guid: fa46d4a5a0358214587bf31956e0d32d, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa46d4a5a0358214587bf31956e0d32d, type: 3}
 --- !u!4 &1868009410 stripped

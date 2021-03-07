@@ -9,17 +9,11 @@ public class ParentToCanvas : MonoBehaviour
     
     void Start()
     {
-        
-
         Transform parentCanvas = GameObject.Find("CanvasMain").transform;
         
         transform.SetParent(parentCanvas);
     }
 
-
-    
-
-    
     void Update()
     {
         
