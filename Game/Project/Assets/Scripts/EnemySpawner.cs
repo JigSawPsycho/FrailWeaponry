@@ -9,15 +9,40 @@ public class EnemySpawner : MonoBehaviour
     GameObject[] Enemies { get { return _enemies; } set { _enemies = value; } }
 
     [SerializeField]
-    SpawnRound spawnRound;
+    SpawnRound[] rounds;
+
+    int currWave = 0;
 
     void Start()
     {
+        currWave = 0;
         StartWave();
     }
 
     void StartWave()
     {
-        StartCoroutine(spawnRound.StartRound());
+        StartCoroutine(rounds[currWave].StartRound());
+
+        StartCoroutine(WaitForRoundToEnd());
+    }
+
+    IEnumerator WaitForRoundToEnd()
+    {
+        yield return new WaitUntil(() => GameObject.FindObjectsOfType<enemyHealth>().Length == 0);
+
+        WaveFinished();
+    }
+
+    void WaveFinished()
+    {
+        Debug.Log("Wave finished.");
+        currWave++;
+        try
+        {
+            StartWave();
+        } catch(System.IndexOutOfRangeException)
+        {
+            Debug.Log("Game finished!");
+        }
     }
 }

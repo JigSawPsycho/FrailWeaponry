@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7814d2f44ce27d84cafb4bc85cd6ba15, type: 3}
-  m_Name: RedBatch
+  m_Name: BatchData 1
   m_EditorClassIdentifier: 
-  enemyToSpawn: {fileID: 8115751048697105827, guid: 900173fd38eb8fe48a0261e9a660ac84, type: 3}
-  numEnemiesToSpawn: 6
-  waitTimeBetweenEnemies: 0.1
+  enemyToSpawn: {fileID: 1718611860859216454, guid: 543dac0709258094e90774f5aa180215, type: 3}
+  numEnemiesToSpawn: 20
+  waitTimeBetweenEnemies: 0.3

@@ -10,11 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99c0aa723b93ef0429d73ba6ad189bf7, type: 3}
-  m_Name: SpawnRoundData
+  m_Name: SpawnRound3
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: 26725d4191a78a34da5190e0a5d98095, type: 2}
-  - {fileID: 11400000, guid: 95416fc6376273c4c8720ecab1f98e3a, type: 2}
-  - {fileID: 11400000, guid: 26725d4191a78a34da5190e0a5d98095, type: 2}
-  - {fileID: 11400000, guid: 95416fc6376273c4c8720ecab1f98e3a, type: 2}
-  delayBetweenWaves: 15.5
+  - {fileID: 11400000, guid: 53402c0a289e4484198f9d335c9cd8b5, type: 2}
+  delayBetweenWaves: 0

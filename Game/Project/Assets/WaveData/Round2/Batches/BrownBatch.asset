@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7814d2f44ce27d84cafb4bc85cd6ba15, type: 3}
-  m_Name: StrongSlowBatch
+  m_Name: BrownBatch
   m_EditorClassIdentifier: 
-  enemyToSpawn: {fileID: 1718611860859216454, guid: 543dac0709258094e90774f5aa180215, type: 3}
-  numEnemiesToSpawn: 4
-  waitTimeBetweenEnemies: 0.2
+  enemyToSpawn: {fileID: 5462997556971422872, guid: 32e77cc8867e2384a9552cb652784923, type: 3}
+  numEnemiesToSpawn: 10
+  waitTimeBetweenEnemies: 1
