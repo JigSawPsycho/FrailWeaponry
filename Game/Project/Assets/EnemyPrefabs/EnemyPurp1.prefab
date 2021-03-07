@@ -4826,6 +4826,7 @@ GameObject:
   - component: {fileID: 5200904216413985725}
   - component: {fileID: 344239857905708357}
   - component: {fileID: -8862848646210234735}
+  - component: {fileID: 8165660107192888406}
   m_Layer: 0
   m_Name: EnemyPurp1
   m_TagString: Enemy
@@ -4891,7 +4892,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: b14c61052c4234f4b92925fbd868793b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.15, y: 0.15}
   m_AdaptiveModeThreshold: 0.5
@@ -4974,3 +4975,24 @@ MonoBehaviour:
   mgKitPrefab: {fileID: 358063930687261360, guid: f3b8f9a7052be2f488f7c0eed8b30933, type: 3}
   spKitPrefab: {fileID: 6579183485391247286, guid: a39129588655f7c4aa1bfbc0be99a76a, type: 3}
   zpKitPrefab: {fileID: 7024831280817988293, guid: 051205dd5be3721439f035ac5696b9e0, type: 3}
+--- !u!50 &8165660107192888406
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248613285321391211}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

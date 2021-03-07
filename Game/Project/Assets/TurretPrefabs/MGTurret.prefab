@@ -42,7 +42,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524316981535319636}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -73,10 +73,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb00e926334b914f92fe1074b012ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1.2
-  healthMax: 30
-  rateOfFire: 0.3
-  range: 10
+  damage: 1
+  healthMax: 60
+  rateOfFire: 0.1
+  range: 20
   healthSlider: {fileID: 2099266167900623393}
   currentTarget: {fileID: 0}
   brokenSprite: {fileID: 21300000, guid: 17f40117f62919b4c869ae004215a54a, type: 3}

@@ -4826,6 +4826,7 @@ GameObject:
   - component: {fileID: 7717054869440928896}
   - component: {fileID: 5959416287576757686}
   - component: {fileID: -5810682335183622207}
+  - component: {fileID: 6970218907639817980}
   m_Layer: 0
   m_Name: EnemyRed1
   m_TagString: Enemy
@@ -4974,3 +4975,24 @@ MonoBehaviour:
   mgKitPrefab: {fileID: 358063930687261360, guid: f3b8f9a7052be2f488f7c0eed8b30933, type: 3}
   spKitPrefab: {fileID: 6579183485391247286, guid: a39129588655f7c4aa1bfbc0be99a76a, type: 3}
   zpKitPrefab: {fileID: 7024831280817988293, guid: 051205dd5be3721439f035ac5696b9e0, type: 3}
+--- !u!50 &6970218907639817980
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115751048697105827}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
