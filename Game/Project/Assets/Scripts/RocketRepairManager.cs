@@ -13,6 +13,11 @@ public class RocketRepairManager : MonoBehaviour
     public static Text MYPacks;
     public static Text MPPacks;
 
+    [SerializeField]
+    GameObject _textureObj;
+
+    Slider obj;
+
     public static bool onMissile = false;
 
     bool hasWon;
@@ -30,9 +35,9 @@ public class RocketRepairManager : MonoBehaviour
         MYPacks = GameObject.Find("MYPacks").GetComponent<Text>();
         MPPacks = GameObject.Find("MPPacks").GetComponent<Text>();
 
-        MYPacks.text = "x 150";
-        MBPacks.text = "x 150";
-        MPPacks.text = "x 150";
+        MYPacks.text = "x 50";
+        MBPacks.text = "x 50";
+        MPPacks.text = "x 50";
 
         hasWon = false;
     }
@@ -40,15 +45,18 @@ public class RocketRepairManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hasWon == true)
+            return;
+
         if(onMissile)
         {
             //Show images for buttons
-            if(Input.GetKeyDown(KeyCode.Q) && mgKitsUsed < 50 && KitManager.mgKits >0)
+            if(Input.GetKeyDown(KeyCode.Q) && mgKitsUsed < 50 && KitManager.mgKits > 0)
             {
                 KitManager.mgKits--;
                 KitManager.mgText.text = $"x {KitManager.mgKits}";
                 mgKitsUsed++;
-                MYPacks.text = $"x {150 - mgKitsUsed}";
+                MYPacks.text = $"x {50 - mgKitsUsed}";
             }
 
             if (Input.GetKeyDown(KeyCode.E) && spKitsUsed < 50 && KitManager.sniperKits > 0)
@@ -56,7 +64,7 @@ public class RocketRepairManager : MonoBehaviour
                 KitManager.sniperKits--;
                 KitManager.spText.text = $"x {KitManager.sniperKits}";
                 spKitsUsed++;
-                MBPacks.text = $"x {150 - spKitsUsed}";
+                MBPacks.text = $"x {50 - spKitsUsed}";
             }
 
             if (Input.GetKeyDown(KeyCode.R) && zpKitsUsed < 50 && KitManager.zapperKits > 0)
@@ -64,7 +72,7 @@ public class RocketRepairManager : MonoBehaviour
                 KitManager.zapperKits--;
                 KitManager.zpText.text = $"x {KitManager.zapperKits}";
                 zpKitsUsed++;
-                MPPacks.text = $"x {150 - zpKitsUsed}";
+                MPPacks.text = $"x {50 - zpKitsUsed}";
             }
         }
 
@@ -73,8 +81,17 @@ public class RocketRepairManager : MonoBehaviour
             Instantiate(winner, transform.position, Quaternion.identity);
 
             hasWon = true;
-            Destroy(gameObject);
+
+            _textureObj.SetActive(false);
+            StartCoroutine(MikeEvans.Enumerators.WaitToCall(5f, LetItSinkIn));
         }
+    }
+
+    //Literally just slows time
+    void LetItSinkIn()
+    {
+        Time.timeScale = 0.1f;
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

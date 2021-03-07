@@ -18,15 +18,12 @@ public class waitsoon : MonoBehaviour
 
     IEnumerator Example2()
     {
-
         yield return new WaitForSeconds(3.5f);
         Particles.SetActive(true);
-        
-
     }
     IEnumerator Example3()
     {
-        yield return new WaitForSeconds(5.5f);
+        yield return new WaitForSecondsRealtime(5f);
 
         WinScreen.SetActive(true);
     }
