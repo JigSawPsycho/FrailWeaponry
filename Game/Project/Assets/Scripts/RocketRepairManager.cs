@@ -76,7 +76,7 @@ public class RocketRepairManager : MonoBehaviour
             }
         }
 
-        if (zpKitsUsed + spKitsUsed + mgKitsUsed == 3 && hasWon == false)
+        if (zpKitsUsed + spKitsUsed + mgKitsUsed == 150 && hasWon == false)
         {
             Instantiate(winner, transform.position, Quaternion.identity);
 
@@ -113,9 +113,7 @@ public class RocketRepairManager : MonoBehaviour
             PlayerUtil.RWrench.SetActive(true);
             PlayerUtil.RPrompt.SetActive(true);
         }
-        
-        
-        
+
         onMissile = true;
     }
 

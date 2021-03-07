@@ -36,8 +36,6 @@ public class KillBotsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  
-
             if ( health <= 0f)
         {
             //Debug.Log("u ded Lol");
@@ -48,6 +46,7 @@ public class KillBotsScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Intruder!");
         if (other.gameObject.tag == "Enemy") { 
             Destroy(other.gameObject);
         health = health - 1;
@@ -111,6 +110,7 @@ public class KillBotsScript : MonoBehaviour
 
         PlayerUtil.isGameOver = true;
         dedScreen.SetActive(true);
+        gameObject.SetActive(false);
 
     }
 }

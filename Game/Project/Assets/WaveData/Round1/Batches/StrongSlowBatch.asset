@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7814d2f44ce27d84cafb4bc85cd6ba15, type: 3}
+  m_Name: StrongSlowBatch
+  m_EditorClassIdentifier: 
+  enemyToSpawn: {fileID: 1718611860859216454, guid: 543dac0709258094e90774f5aa180215, type: 3}
+  numEnemiesToSpawn: 4
+  waitTimeBetweenEnemies: 0.2
