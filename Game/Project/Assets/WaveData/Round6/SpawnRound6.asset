@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99c0aa723b93ef0429d73ba6ad189bf7, type: 3}
-  m_Name: SpawnRound5
+  m_Name: SpawnRound6
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: a780686a7eb0171468fe7174dcf22077, type: 2}
-  - {fileID: 11400000, guid: a780686a7eb0171468fe7174dcf22077, type: 2}
-  delayBetweenWaves: 5
+  - {fileID: 11400000, guid: 21d3ed51de05b1a489226b01ff147b2e, type: 2}
+  - {fileID: 11400000, guid: 27038aef0def2e847821072b2d69668d, type: 2}
+  delayBetweenWaves: 0.25

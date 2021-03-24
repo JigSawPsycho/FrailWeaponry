@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BatchData 1
   m_EditorClassIdentifier: 
   enemyToSpawn: {fileID: 1718611860859216454, guid: 543dac0709258094e90774f5aa180215, type: 3}
-  numEnemiesToSpawn: 15
+  numEnemiesToSpawn: 10
   waitTimeBetweenEnemies: 0.2

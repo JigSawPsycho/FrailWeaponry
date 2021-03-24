@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     SpawnRound[] rounds;
 
+    Action OnStartWave;
+
     int currWave = 0;
 
     void Start()
@@ -21,6 +24,7 @@ public class EnemySpawner : MonoBehaviour
 
     void StartWave()
     {
+        OnStartWave?.Invoke();
         StartCoroutine(rounds[currWave].StartRound());
 
         StartCoroutine(WaitForRoundToEnd());

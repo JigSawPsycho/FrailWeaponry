@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1532356155517821404}
   - component: {fileID: 3887978569014682445}
   - component: {fileID: 661100484609157275}
-  - component: {fileID: 575490662597353121}
   - component: {fileID: 7218013522579197308}
+  - component: {fileID: 575490662597353121}
   - component: {fileID: -4790693847010303575}
   - component: {fileID: 6506974034812965873}
   m_Layer: 0
@@ -114,21 +114,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &575490662597353121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426129261588978943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403a3723edd41214ea472abe231d501d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosion: {fileID: 2808102032452626301, guid: 32fc22befa1430641b0e7e86c3981ea2, type: 3}
-  damageExplosion: {fileID: 2882711479708330450, guid: 5db763a04420444428f1ed149658efd8, type: 3}
-  EnemyHealth: 10
 --- !u!95 &7218013522579197308
 Animator:
   serializedVersion: 3
@@ -148,6 +133,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &575490662597353121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426129261588978943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403a3723edd41214ea472abe231d501d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 2808102032452626301, guid: 32fc22befa1430641b0e7e86c3981ea2, type: 3}
+  damageExplosion: {fileID: 2882711479708330450, guid: 5db763a04420444428f1ed149658efd8, type: 3}
+  EnemyHealth: 20
 --- !u!114 &-4790693847010303575
 MonoBehaviour:
   m_ObjectHideFlags: 0

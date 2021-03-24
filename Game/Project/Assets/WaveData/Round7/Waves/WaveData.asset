@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604976d4e1ac7d4458e41174df57965a, type: 3}
+  m_Name: WaveData
+  m_EditorClassIdentifier: 
+  batchesToSpawn:
+  - {fileID: 11400000, guid: aae0385abe2941745a13a97363b63f83, type: 2}
+  - {fileID: 11400000, guid: aae0385abe2941745a13a97363b63f83, type: 2}
+  - {fileID: 11400000, guid: aae0385abe2941745a13a97363b63f83, type: 2}
+  - {fileID: 11400000, guid: aae0385abe2941745a13a97363b63f83, type: 2}
+  - {fileID: 11400000, guid: aae0385abe2941745a13a97363b63f83, type: 2}
+  - {fileID: 11400000, guid: aae0385abe2941745a13a97363b63f83, type: 2}
+  - {fileID: 11400000, guid: 16a17650d55417040ad794be1c64e4fe, type: 2}
+  - {fileID: 11400000, guid: 16a17650d55417040ad794be1c64e4fe, type: 2}
+  - {fileID: 11400000, guid: 16a17650d55417040ad794be1c64e4fe, type: 2}
+  - {fileID: 11400000, guid: 16a17650d55417040ad794be1c64e4fe, type: 2}
+  - {fileID: 11400000, guid: 16a17650d55417040ad794be1c64e4fe, type: 2}
+  - {fileID: 11400000, guid: 16a17650d55417040ad794be1c64e4fe, type: 2}
+  delayBetweenBatches: 2

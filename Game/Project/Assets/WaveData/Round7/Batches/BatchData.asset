@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c0aa723b93ef0429d73ba6ad189bf7, type: 3}
-  m_Name: SpawnRound5
+  m_Script: {fileID: 11500000, guid: 7814d2f44ce27d84cafb4bc85cd6ba15, type: 3}
+  m_Name: BatchData
   m_EditorClassIdentifier: 
-  waves:
-  - {fileID: 11400000, guid: a780686a7eb0171468fe7174dcf22077, type: 2}
-  - {fileID: 11400000, guid: a780686a7eb0171468fe7174dcf22077, type: 2}
-  delayBetweenWaves: 5
+  enemyToSpawn: {fileID: 8115751048697105827, guid: 900173fd38eb8fe48a0261e9a660ac84, type: 3}
+  numEnemiesToSpawn: 5
+  waitTimeBetweenEnemies: 2
