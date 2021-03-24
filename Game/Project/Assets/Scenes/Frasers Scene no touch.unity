@@ -566,10 +566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee6f8828ab93e4cbeb48716df0ff18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1718611860859216454, guid: 543dac0709258094e90774f5aa180215, type: 3}
-  baseRepeatRate: 1.5
-  difficultySlope: 0.4
-  frequency: 0.6
+  _enemies: []
+  spawnRound: {fileID: 0}
 --- !u!4 &218814616
 Transform:
   m_ObjectHideFlags: 0
@@ -1382,7 +1380,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &574174254 stripped
 Transform:
@@ -1418,10 +1416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee6f8828ab93e4cbeb48716df0ff18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 7248613285321391211, guid: 8ad0308bddb834a46954a8900eba11c8, type: 3}
-  baseRepeatRate: 4.8
-  difficultySlope: 2.9
-  frequency: 1.5
+  _enemies: []
+  spawnRound: {fileID: 0}
 --- !u!4 &590195365
 Transform:
   m_ObjectHideFlags: 0
@@ -2705,7 +2701,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &990493227
 GameObject:
@@ -3107,7 +3103,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1183513152
 GameObject:
@@ -3314,10 +3310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee6f8828ab93e4cbeb48716df0ff18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 426129261588978943, guid: c9046a7b0377413499b3e80f46fcc086, type: 3}
-  baseRepeatRate: 2.4
-  difficultySlope: 1.2
-  frequency: 3.9
+  _enemies: []
+  spawnRound: {fileID: 0}
 --- !u!4 &1333623160
 Transform:
   m_ObjectHideFlags: 0
@@ -3330,7 +3324,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1362113677
 GameObject:
@@ -3700,7 +3694,7 @@ Transform:
   - {fileID: 909295345}
   - {fileID: 1469898080}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1488437104
 PrefabInstance:
@@ -4164,10 +4158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee6f8828ab93e4cbeb48716df0ff18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8115751048697105827, guid: 900173fd38eb8fe48a0261e9a660ac84, type: 3}
-  baseRepeatRate: 4.9
-  difficultySlope: 2.3
-  frequency: 1
+  _enemies: []
+  spawnRound: {fileID: 0}
 --- !u!4 &1727161588
 Transform:
   m_ObjectHideFlags: 0
@@ -4180,7 +4172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745038188
 GameObject:
@@ -4712,7 +4704,7 @@ Transform:
   - {fileID: 1902907433}
   - {fileID: 20382923}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1983902793
 GameObject:
@@ -4743,10 +4735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee6f8828ab93e4cbeb48716df0ff18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5462997556971422872, guid: 32e77cc8867e2384a9552cb652784923, type: 3}
-  baseRepeatRate: 4.6
-  difficultySlope: 4
-  frequency: 0.4
+  _enemies: []
+  spawnRound: {fileID: 0}
 --- !u!4 &1983902795
 Transform:
   m_ObjectHideFlags: 0
@@ -4759,7 +4749,89 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2041841406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041841408}
+  - component: {fileID: 2041841407}
+  m_Layer: 0
+  m_Name: New Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &2041841407
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041841406}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 0.027450982, g: 0.25490198, b: 0.47450984, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2041841408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041841406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.39528, y: -19.76597, z: -550.5178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2047962996 stripped
 Transform:
@@ -4795,10 +4867,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee6f8828ab93e4cbeb48716df0ff18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 195912673016521433, guid: 93e2af2d12058d145af7f2cff423c7eb, type: 3}
-  baseRepeatRate: 3.4
-  difficultySlope: 2.9
-  frequency: 0.4
+  _enemies: []
+  spawnRound: {fileID: 0}
 --- !u!4 &2055248176
 Transform:
   m_ObjectHideFlags: 0
