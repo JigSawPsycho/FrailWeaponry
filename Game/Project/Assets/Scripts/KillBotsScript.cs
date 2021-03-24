@@ -110,7 +110,7 @@ public class KillBotsScript : MonoBehaviour
 
         PlayerUtil.isGameOver = true;
         dedScreen.SetActive(true);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
 
     }
 }

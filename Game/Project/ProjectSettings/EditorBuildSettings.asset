@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuNoEdit.unity
     guid: 21bbacf5269f1d04188e93be032e0f2b
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 6a0543efb11a1614e9ac5f438ede6d4d
+    path: Assets/Scenes/Frasers Scene no touch.unity
+    guid: 6490f8068ec8d7545be7a503fee7a001
   m_configObjects: {}
